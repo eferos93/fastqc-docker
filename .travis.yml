@@ -1,0 +1,11 @@
+services:
+  - docker
+install:
+  - docker build -t fastqc .
+script: 
+  - docker images fastqc
+  - docker run fastqc
+after_success:   
+  - docker tag fastqc eferos93/fastqc:latest
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push eferos93/fastqc
