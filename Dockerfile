@@ -15,4 +15,5 @@ LABEL extra.binaries="fastqc"
 LABEL maintainer="Eros Fabrici"
 LABEL maintainer.email="eros.fabrici@gmail.com"
 
+WORKDIR /
 ENTRYPOINT [ "fastqc" ]
