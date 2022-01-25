@@ -15,6 +15,6 @@ LABEL extra.binaries="fastqc"
 LABEL maintainer="Eros Fabrici"
 LABEL maintainer.email="eros.fabrici@gmail.com"
 
-RUN mkdir genomic_data
+# RUN mkdir genomic_data
 WORKDIR /
 ENTRYPOINT [ "fastqc" ]
