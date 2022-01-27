@@ -16,6 +16,6 @@ LABEL maintainer="Eros Fabrici"
 LABEL maintainer.email="eros.fabrici@gmail.com"
 
 RUN mkdir genomic_data_test
-RUN mkdir production_directory
+RUN mkdir illumina_run
 WORKDIR /
 ENTRYPOINT [ "fastqc" ]
