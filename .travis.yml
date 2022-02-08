@@ -3,6 +3,7 @@ services:
 install:
   - docker build -t fastqc .
 script: 
+  - docker run fastqc -t 2 -o unit_test_data unit_test_data/Undetermined_S0_R1_001.fastq.gz unit_test_data/Undetermined_S0_R2_001.fastq.gz
   - docker images fastqc
 after_success:   
   - docker tag fastqc eferos93/fastqc:latest

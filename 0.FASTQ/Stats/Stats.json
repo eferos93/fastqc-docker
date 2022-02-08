@@ -1,0 +1,66 @@
+{
+ "Flowcell" : "000000000-CLL8M",
+ "RunNumber" : 232,
+ "RunId" : "YYMMDD_M05588_0232_000000000-CLL8M",
+ "ReadInfosForLanes" : [
+  {
+   "LaneNumber" : 1,
+   "ReadInfos" : [
+    {
+     "Number" : 1,
+     "NumCycles" : 309,
+     "IsIndexedRead" : false
+    },
+    {
+     "Number" : 1,
+     "NumCycles" : 8,
+     "IsIndexedRead" : true
+    },
+    {
+     "Number" : 2,
+     "NumCycles" : 309,
+     "IsIndexedRead" : false
+    }
+   ]
+  }
+ ],
+ "ConversionResults" : [
+  {
+   "LaneNumber" : 1,
+   "TotalClustersRaw" : 120,
+   "TotalClustersPF" : 120,
+   "Yield" : 74160,
+   "DemuxResults" : [
+
+   ],
+   "Undetermined" : {
+    "NumberReads" : 120,
+    "Yield" : 74160,
+    "ReadMetrics" : [
+     {
+      "ReadNumber" : 1,
+      "Yield" : 37080,
+      "YieldQ30" : 29952,
+      "QualityScoreSum" : 1223479,
+      "TrimmedBases" : 0
+     },
+     {
+      "ReadNumber" : 2,
+      "Yield" : 37080,
+      "YieldQ30" : 26581,
+      "QualityScoreSum" : 1139700,
+      "TrimmedBases" : 0
+     }
+    ]
+   }
+  }
+ ],
+ "UnknownBarcodes" : [
+  {
+   "Lane" : 1,
+   "Barcodes" : {
+    "unknown" : 120
+   }
+  }
+ ]
+}

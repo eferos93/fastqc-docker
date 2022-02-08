@@ -15,6 +15,9 @@ LABEL extra.binaries="fastqc"
 LABEL maintainer="Eros Fabrici"
 LABEL maintainer.email="eros.fabrici@gmail.com"
 
+RUN mkdir unit_test_data
+COPY 0.FASTQ/ /unit_test_data/
+
 RUN mkdir genomic_data_test
 RUN mkdir illumina_run
 WORKDIR /
