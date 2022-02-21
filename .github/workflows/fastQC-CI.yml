@@ -1,0 +1,31 @@
+# This is a basic workflow to help you get started with Actions
+
+name: FastQC-CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build the Docker image
+      run: docker build -t fastqc .
+    - name: Log in to Docker Hub
+      uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
+      with:
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PWD }}
+    - name: Test the image
+      run: docker run fastqc -t 2 -o unit_test_data unit_test_data/Undetermined_S0_R1_001.fastq.gz unit_test_data/Undetermined_S0_R2_001.fastq.gz
+    - name: Tag and Push the Image
+      run: |
+          docker tag fastqc eferos93/fastqc:latest
+          docker push eferos93/fastqc
