@@ -1,3 +1,3 @@
-[![Build Status](https://app.travis-ci.com/eferos93/fastqc-docker.svg?branch=main)](https://app.travis-ci.com/eferos93/fastqc-docker)
+![example workflow](https://github.com/eferos93/fastqc-docker/actions/workflows/fastQC-CI.yml/badge.svg)
 # fastqc-docker
 A Fastqc Docker image
